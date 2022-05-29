@@ -33,6 +33,24 @@
     <label for="phone">Test</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br><br>
     
     <label for="description">Description</label><textarea name="description"></textarea><br><br>
+
+    <script src="https://webcasedemo-developer-edition.na213.force.com//lightning/lightning.out.js"></script>
+
+<div id="lightningLocator"></div>
+
+<script>
+    $Lightning.use("c:embedFlowInExternalWebsiteApp",
+        function() {
+            $Lightning.createComponent(
+                "c:embedFlowInExternalWebsite",
+                { },                  
+                "lightningLocator",   
+                function(cmp) {}
+            );
+        },
+        'https://webcasedemo-developer-edition.na213.force.com/'
+    );
+</script>
     
     <input type="submit" name="submit">
     
